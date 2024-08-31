@@ -1,0 +1,295 @@
+/* location.css */
+.location-quick-view-modal,
+.location-modal-overlay {
+    display: none;
+}
+
+.location-quick-view-modal.active,
+.location-modal-overlay.active {
+    display: block;
+}
+
+.location-quick-view-modal {
+    position: fixed;
+    z-index: 999999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.location-quick-view-modal .modal-content {
+    background: #fff;
+    padding: 20px;
+    margin: 5% auto;
+    max-width: 600px;
+}
+
+.location-quick-view-modal .modal-header,
+.location-quick-view-modal .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.location-quick-view-modal .modal-header h5,
+.location-quick-view-modal .modal-footer a {
+    margin: 0;
+}
+
+.location-quick-view-modal .modal-header button.close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.location-quick-view-modal .modal-body {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.location-quick-view-modal .quick-view-modal-thumbnail {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.location-quick-view-modal .quick-view-modal-description,
+.location-quick-view-modal .quick-view-modal-address,
+.location-quick-view-modal .quick-view-modal-phone {
+    margin-bottom: 10px;
+}
+
+.location-quick-view-modal .quick-view-modal-location-website {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.location-quick-view-modal .location-scroll-indicator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.75); /* 75% blue background */
+    color: white;
+    padding: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* Close button styles */
+.quick-view-close-modal,
+.quick-view-close-x {
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quick-view-close-x {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 255, 0.75);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.quick-view-close-modal:hover,
+.quick-view-close-x:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) { /* Tablet and below */
+    .location-quick-view-modal {
+        width: 90%;
+        height: 90vh;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: 90vh;
+    }
+
+    .location-modal-overlay {
+        display: block; /* Ensure the overlay is visible */
+    }
+}
+
+@media (max-width: 767px) { /* Mobile */
+    .location-quick-view-modal {
+        width: 95%;
+        height: 90vh;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: 90vh;
+    }
+
+    .location-modal-overlay {
+        display: block; /* Ensure the overlay is visible */
+    }
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Adjustments for modal content */
+.location-quick-view-modal .modal-content {
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+.location-quick-view-modal .modal-body {
+    margin-top: 10px;
+}
+
+/* Ensure proper alignment and layout for icons and text */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-body .location-name {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card-body .location-details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.card-body i {
+    grid-column: 1;
+}
+
+.card-body span,
+.card-body a {
+    grid-column: 2;
+}
+
+.location-quick-view-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.location-quick-view-link i {
+    margin-right: 5px;
+}
+
+.geodir-field-quick-view {
+    margin-top: 10px;
+}
+
+/* Ensure proper alignment and layout for icons and text */
+.card-footer .geodir-post-meta-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.geodir-i-quick-view {
+    margin-right: 5px;
+}
+
+.location-quick-view-link {
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.location-quick-view-link i {
+    margin-right: 5px;
+}
+
+.geodir_post_meta_icon.geodir-i-quick-view {
+    margin-right: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.geodir_post_meta a {
+    display: inline-flex;
+    align-items: center;
+    text-align: left; /* Ensures left alignment */
+    color: blue;
+}
+
+.quick-view-link {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+}
+
+.quick-view-link i {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.bsui .text-primary {
+    color: blue !important;
+    font-family: 'Evanston Alehouse';
+    font-size: x-large;
+    text-decoration: underline;
+}
